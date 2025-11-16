@@ -1,0 +1,113 @@
+from decimal import Decimal
+from src.utils.input_utils import get_decimal_input
+from src.utils.input_utils import get_choice_input
+from src.utils.input_utils import get_integer_input
+from src.geometry import Area_and_Perimeter_Functions as geo_tools
+
+
+def run_area_and_perimeter_menu():
+    print(
+        "Press 1 for perimeter of a rectangle, square, or parallelogram.\n"
+        "Press 2 for perimeter of an irregular quadrilateral or trapezoid.\n"
+        "Press 3 for area of a rectangle or square.\n"
+        "Press 4 for area of a parallelogram.\n"
+        "Press 5 for area of a trapezoid.\n"
+        "Press 6 for perimeter of a triangle.\n"
+        "Press 7 for area of a triangle.\n"
+        "Press 8 for perimeter of a regular polygon.\n"
+        "Press 9 for area of a regular polygon.\n"
+        "Press 10 for circumference of a circle.\n"
+        "Press 11 for area of a circle."
+    )
+
+
+    function_choice = get_choice_input("Enter your choice (1–11): ", 1, 11)
+    #function_choice = get_choice_input("Enter your choice: ")
+    while not (1 <= function_choice <= 11):
+        get_choice_input("Invalid input. Enter your choice: ")
+        function_choice = int(input())
+
+    if function_choice == 1:
+        length = get_decimal_input("Enter the length: ")
+        width = get_decimal_input("Enter the width: ")
+        perimeter = geo_tools.parallelogram_perimeter(length, width)
+        print(f"The perimeter is {round(perimeter, 2)} units.")
+
+    elif function_choice == 2:
+        side_a = get_decimal_input("Enter the length of the first side: ")
+        side_b = get_decimal_input("Enter the length of the second side: ")
+        side_c = get_decimal_input("Enter the length of the third side: ")
+        side_d = get_decimal_input("Enter the length of the fourth side: ")
+        perimeter = geo_tools.irregular_quadrilateral_perimeter(side_a, side_b, side_c, side_d)
+        print(f"The perimeter is {round(perimeter, 2)} units.")
+
+    elif function_choice == 3:
+        length = get_decimal_input("Enter the length: ")
+        width = get_decimal_input("Enter the width: ")
+        area = geo_tools.quadrilateral_area(length, width)
+        print(f"The area is {round(area, 2)} square units.")
+
+    elif function_choice == 4:
+        base = get_decimal_input("Enter the base length: ")
+        height = get_decimal_input("Enter the height: ")
+        area = geo_tools.quadrilateral_area(base, height)
+        print(f"The area is {round(area, 2)} square units.")
+
+    elif function_choice == 5:
+        base_a = get_decimal_input("Enter the length of the first base: ")
+        base_b = get_decimal_input("Enter the length of the second base: ")
+        height = get_decimal_input("Enter the height: ")
+        area = geo_tools.trapezoid_area(base_a, base_b, height)
+        print(f"The area is {round(area, 2)} square units.")
+
+    elif function_choice == 6:
+        side_a = get_decimal_input("Enter the length of the first side: ")
+        side_b = get_decimal_input("Enter the length of the second side: ")
+        side_c = get_decimal_input("Enter the length of the third side: ")
+        perimeter = geo_tools.triangle_perimeter(side_a, side_b, side_c)
+        print(f"The perimeter is {round(perimeter, 2)} units.")
+
+    elif function_choice == 7:
+        base = get_decimal_input("Enter the base: ")
+        height = get_decimal_input("Enter the height: ")
+        area = geo_tools.triangle_area(base, height)
+        print(f"The area is {round(area, 2)} square units.")
+
+    elif function_choice == 8:
+        num_sides = get_decimal_input("Enter the number of sides: ")
+        side_length = get_decimal_input("Enter the side length: ")
+        perimeter = geo_tools.regular_polygon_perimeter(num_sides, side_length)
+        print(f"The perimeter is {round(perimeter, 2)} units.")
+
+    elif function_choice == 9:
+        num_sides = get_integer_input("Enter the number of sides: ")
+        side_length = get_decimal_input("Enter the side length: ")
+        apothem = get_decimal_input("Enter the apothem length: ")
+        area = geo_tools.regular_polygon_area(num_sides, side_length, apothem)
+        print(f"The area is {round(area, 2)} square units.")
+
+    elif function_choice == 10:
+        radius = get_decimal_input("Enter the radius: ")
+        circumference = geo_tools.circle_circumference(radius)
+        print(f"The circumference is {round(circumference, 2)} units.")
+
+    elif function_choice == 11:
+        radius = get_decimal_input("Enter the radius: ")
+        area = geo_tools.circle_area(radius)
+        print(f"The area is {round(area, 2)} square units.")
+
+
+if __name__ == "__main__":
+    terminate_program = True
+
+    while terminate_program:
+        run_area_and_perimeter_menu()
+
+        print("Press 'y' to continue or 'q' to exit")
+        user_quit = input().lower()
+        while user_quit not in ["y", "q"]:
+            print("Invalid response. Press 'y' to continue or 'q' to exit ")
+            user_quit = input().lower()
+
+        if user_quit == "q":
+            terminate_program = False

@@ -1,0 +1,85 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Trigonometry Menu",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "src.ui.Trigonometry_Menu",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Trigonometry Functions",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "src.geometry.Trigonometry_Functions",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Algebra Numerical Solve",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "src.algebra.numerical_solve",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Main Geometry Menu",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "src.ui.Main_Geometry_Menu",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Volume Functions",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "src.geometry.Volume_Functions",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "src.ui.Volume_Menu",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Input Utilities",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "src.utils.input_utils",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Run Area Menu",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "src.ui.Area_and_Perimeter_Menu_v2",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Run Surface Area Menu",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "src.ui.Surface_Area_Menu_v2",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Run Volume Menu",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "src.ui.Volume_Menu",
+            "console": "integratedTerminal"
+        }
+    ]
+}
