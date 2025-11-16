@@ -34,13 +34,6 @@
             "console": "integratedTerminal"
         },
         {
-            "name": "Main Geometry Menu",
-            "type": "debugpy",
-            "request": "launch",
-            "module": "src.ui.Main_Geometry_Menu",
-            "console": "integratedTerminal"
-        },
-        {
             "name": "Volume Functions",
             "type": "debugpy",
             "request": "launch",
