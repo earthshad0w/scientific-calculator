@@ -19,7 +19,7 @@ def run_geometry_main_menu():
     function_choice = get_choice_input("Enter your choice (1–4): ", 1, 4)
     while not (1 <= function_choice <= 9):
         print("Invalid choice. Please choose a number between 1 and 4.")
-        function_choice = int(input())
+        function_choice = get_choice_input("Enter your choice (1–4): ", 1, 4)
 
     if function_choice == 1:
         area_and_perimeter_menu.run_area_and_perimeter_menu()

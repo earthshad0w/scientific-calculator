@@ -43,7 +43,7 @@ def run_area_and_perimeter_menu():
     elif function_choice == 3:
         length = smart_decimal_input("Enter the length: ")
         width = smart_decimal_input("Enter the width: ")
-        area = geo_tools.quadrilateral_area(length, width)
+        area = geo_tools.rectangle_area(length, width)
         print(f"The area is {round(area, 2)} square units.")
 
     elif function_choice == 4:
@@ -96,17 +96,17 @@ def run_area_and_perimeter_menu():
         print(f"The area is {round(area, 2)} square units.")
 
 
-if __name__ == "__main__":
-    terminate_program = True
+# if __name__ == "__main__":
+#     terminate_program = True
 
-    while terminate_program:
-        run_area_and_perimeter_menu()
+#     while terminate_program:
+#         run_area_and_perimeter_menu()
 
-        print("Press 'y' to continue or 'q' to exit")
-        user_quit = input().lower()
-        while user_quit not in ["y", "q"]:
-            print("Invalid response. Press 'y' to continue or 'q' to exit ")
-            user_quit = input().lower()
+#         print("Press 'y' to continue or 'q' to exit")
+#         user_quit = input().lower()
+#         while user_quit not in ["y", "q"]:
+#             print("Invalid response. Press 'y' to continue or 'q' to exit ")
+#             user_quit = input().lower()
 
-        if user_quit == "q":
-            terminate_program = False
+#         if user_quit == "q":
+#             terminate_program = False

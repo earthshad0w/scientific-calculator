@@ -1,5 +1,6 @@
 {
     "python.analysis.extraPaths": [
         "./src/geometry"
-    ]
+    ],
+    "code-runner.clearPreviousOutput": true
 }
