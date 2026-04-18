@@ -3,7 +3,7 @@ import math
 from decimal import Decimal
 
 
-pi = math.pi
+pi = Decimal(math.pi)
 
 # Perimeter of a triangle
 def triangle_perimeter(side_1, side_2, side_3):
