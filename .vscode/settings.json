@@ -2,5 +2,6 @@
     "python.analysis.extraPaths": [
         "./src/geometry"
     ],
-    "code-runner.clearPreviousOutput": true
+    "code-runner.clearPreviousOutput": true,
+    "python-envs.defaultEnvManager": "ms-python.python:pipenv"
 }

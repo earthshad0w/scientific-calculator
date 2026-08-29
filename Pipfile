@@ -5,8 +5,8 @@ name = "pypi"
 
 [packages]
 scipy = "*"
-numpy = "*"
 sympy = "*"
+numpy = "*"
 
 [dev-packages]
 

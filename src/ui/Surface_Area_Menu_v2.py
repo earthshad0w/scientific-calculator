@@ -71,20 +71,20 @@ def run_surface_area_menu():
         print(f"The surface area of the frustum is {surface_area} square units.")
     
     
-if __name__ == "__main__":
-    terminate_program = True
+# if __name__ == "__main__":
+#     terminate_program = True
 
-    while terminate_program:
-        run_surface_area_menu()
+#     while terminate_program:
+#         run_surface_area_menu()
 
-        print("Press 'y' to continue or 'q' to exit")
-        user_quit = input().lower()
-        while user_quit not in ["y", "q"]:
-            print("Invalid response. Press 'y' to continue or 'q' to exit ")
-            user_quit = input().lower()
+#         print("Press 'y' to continue or 'q' to exit")
+#         user_quit = input().lower()
+#         while user_quit not in ["y", "q"]:
+#             print("Invalid response. Press 'y' to continue or 'q' to exit ")
+#             user_quit = input().lower()
 
-        if user_quit == "q":
-            terminate_program = False
+#         if user_quit == "q":
+#             terminate_program = False
 
 
 
